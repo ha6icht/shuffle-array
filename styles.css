@@ -1,0 +1,125 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+    text-transform: uppercase;
+    text-align: center;
+}
+.picture{
+    margin-top: 12px;
+    width: 300px;
+    margin: 0 auto;
+}
+img{
+    width: 300px;
+}
+.description{
+    margin-top: 50px;
+    width: 300px;
+    margin: 0 auto;
+    font-size: 15px;
+}
+.description li{
+    margin-top: 5px;
+}
+table{
+    margin: 0 auto;
+    width: 300px;
+    margin-top: 30px;
+    font-size: 19px;
+}
+.inputText{
+    letter-spacing: 1px;
+}
+.input{
+    margin-top: 2%;
+    height: 30px;
+    border: solid 1px #000;
+    border-radius: 5px;
+    box-shadow: 1px 1px;
+    text-align: left;
+    width: 145px;
+    max-width: 145px;
+    /*overflow: hidden;*/
+    padding-left: 3px;
+}
+.buttons{
+    margin: 0 auto;
+    width: 300px;
+    height: 110px;
+    user-select: none;
+}
+.buttons ul{
+    padding-inline-start: 0;
+    margin: 0 auto;
+    width: 180px;
+    margin-top: 25px;
+}
+.buttons li{
+    list-style: none;
+}
+.buttonSVG{
+    float: left;
+    /*width: 30px;*/
+    cursor: pointer;
+    margin-left: 16px;
+    padding: 4px 6px;
+    background: #e7e2e2;
+    border: solid 1px #000;
+    border-radius: 10px;
+    box-shadow: inset 2px 1px;
+}
+.buttonSVG img{
+    width: 30px;
+    height: 30px;
+}
+.buttonSVG:hover{
+    background: #928e8e;
+}
+#submenuCreateSVG{
+    position: absolute;
+    display: none;
+    border: solid 1px #000;
+    border-radius: 6px;
+    box-shadow: inset 1px 1px #000;
+    width: 90px;
+    margin-left: -5px;
+    margin-top: 6px;
+    background: #e7e2e2;
+    
+}
+#submenuCreateSVG ul{
+    margin: 0;
+    padding: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+#submenuCreateSVG li{
+    font-size: 18px;
+    padding: 5px;
+    border-bottom: dotted 1px #928e8e;
+    margin-bottom: 3px;
+    font-weight: 600;
+    cursor: pointer;
+}
+#submenuCreateSVG li:hover{
+    background: #928e8e;
+}
+.facebook{
+    margin: 0 auto;
+    width: 300px;
+    margin-top: 15px;
+}
+.google{
+    font-size: 10px;
+    margin: 0 auto;
+    width: 300px;
+    margin-top: 25px;
+    text-align: left;
+}
+a{
+    text-decoration: none;    
+}
+.google p{
+    margin-top: 18px;
+}
