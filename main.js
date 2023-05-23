@@ -28,24 +28,21 @@ let createdString = '';
 let createdArray = [];
 let safeMyArray = myArray.slice();
 
+const insertArray = document.getElementById('array');
+const button = document.getElementById('button');
+const outputArray = document.getElementById('shuffledArray');
+const undoButton = document.getElementById('undoSVG');
+const createButton = document.getElementById('createSVG');
+const createButtonSvg = document.querySelector('svg');
+const createButtonPath = document.querySelector('path');
+const navigationCreate = document.getElementById('navigationCreate');
+const newArray = document.getElementById('new');
+const changeArray = document.getElementById('change');
+const body = document.querySelector('body');
+
 let create = false;
 let clickCreate = false;
 let keyString = '';
-
-// Manipulating DOM; get element by id or tag
-const insertArray = document.getElementById('array');
-const outputArray = document.getElementById('shuffledArray');
-
-const imageCreateButton = document.getElementById('imageCreateSVG');
-const newArray = document.getElementById('new');
-const changeArray = document.getElementById('change');
-const imagePlayButton = document.getElementById('imagePlaySVG');
-const imageUndoButton = document.getElementById('imageUndoSVG');
-const submenuCreate = document.getElementById('submenuCreateSVG');
-
-const body = document.querySelector('body');
-
-
 
 // Inserts myArray into start array bar
 insertArray.innerHTML = myArray;
@@ -61,19 +58,20 @@ function setArray(event){
     }
 }
 
-// Click event on whole page expect create button
 // Closes submenu of create button
+// Click event on whole page expect create button
 body.onclick = function(event){
     const target = event.target;
-    if(target !== imageCreateButton){
-        submenuCreate.style.display = 'none';
+    //console.log(target);
+    if(target !== createButtonSvg && target !== createButtonPath && target !== createButton){
+        navigationCreate.style.display = 'none';
         clickCreate = false;
     }
 }
 
-// Click event on play button
+// Click event on let's shuffle button
 // Calls shuffle function
-imagePlayButton.onclick = function(){
+button.onclick = function(){
     if(create && keyString === 'Enter' && createdArray.length > 1){
         insertArray.contentEditable = false;
         outputArray.innerHTML = shuffle(createdArray);
@@ -95,7 +93,7 @@ imagePlayButton.onclick = function(){
 
 // Click event on undo button
 // Clears shuffled array bar
-imageUndoButton.onclick = function(){
+undoButton.onclick = function(){
     outputArray.innerHTML = '';
     keyString = '';
     if(create){
@@ -106,18 +104,18 @@ imageUndoButton.onclick = function(){
 
 // Click event on create button
 // opens/closes submenu
-imageCreateButton.onclick = function(){
+createButton.onclick = function(){
     if(clickCreate){
-        submenuCreate.style.display = 'none';
+        navigationCreate.style.display = 'none';
         clickCreate = false;
     }
     else{
-        submenuCreate.style.display = 'block';
+        navigationCreate.style.display = 'inline-block';
         clickCreate = true;
     }
 }
 
-// Click event on submenu entry new
+// Click event on new submenu entry
 // User can enter array into start array bar
 newArray.onclick = function(){
     create = true;
@@ -130,7 +128,7 @@ newArray.onclick = function(){
     insertArray.onkeydown = setArray;
 }
 
-// Click event on submenu entry change
+// Click event on change submenu entry
 // User can change array in start array bar
 changeArray.onclick = function(){
     const checkInsertArray = insertArray.innerHTML

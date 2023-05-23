@@ -1,5 +1,6 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
+    /*text-align: center;*/
 }
 h1{
     text-transform: uppercase;
@@ -46,21 +47,13 @@ table{
 .buttons{
     margin: 0 auto;
     width: 300px;
-    height: 110px;
     user-select: none;
 }
-.buttons ul{
-    padding-inline-start: 0;
-    margin: 0 auto;
-    width: 180px;
-    margin-top: 25px;
-}
-.buttons li{
-    list-style: none;
-}
-.buttonSVG{
-    float: left;
-    /*width: 30px;*/
+#createSVG{
+    position: relative;
+    top: 10px;
+    display: inline-block;
+    width: 30px;
     cursor: pointer;
     margin-left: 16px;
     padding: 4px 6px;
@@ -69,46 +62,82 @@ table{
     border-radius: 10px;
     box-shadow: inset 2px 1px;
 }
-.buttonSVG img{
-    width: 30px;
-    height: 30px;
-}
-.buttonSVG:hover{
+#createSVG:hover{
     background: #928e8e;
 }
-#submenuCreateSVG{
-    position: absolute;
+#navigationCreate{
     display: none;
     border: solid 1px #000;
-    border-radius: 6px;
+    border-radius: 3px;
     box-shadow: inset 1px 1px #000;
     width: 90px;
-    margin-left: -5px;
-    margin-top: 6px;
+    margin-left: 18px;
+    margin-top: 1px;
     background: #e7e2e2;
     
 }
-#submenuCreateSVG ul{
+#navigationCreate ul{
     margin: 0;
     padding: 0;
     padding-top: 5px;
     padding-bottom: 5px;
 }
-#submenuCreateSVG li{
+#navigationCreate li{
     font-size: 18px;
-    padding: 5px;
+    list-style: none;
+    padding-right: 5px;
+    padding-left: 5px;
+    padding-bottom: 5px;
+    padding-top: 5px;
     border-bottom: dotted 1px #928e8e;
     margin-bottom: 3px;
     font-weight: 600;
     cursor: pointer;
 }
-#submenuCreateSVG li:hover{
+#navigationCreate li:hover{
+    background: #928e8e;
+}
+#button{
+    display: inline-block;
+    margin: 0 auto;
+    width: 100px;
+    height: 20px;
+    border: solid 1px #000;
+    border-radius: 10px;
+    box-shadow: inset 2px 1px;
+    background: #e7e2e2;
+    text-align: center;
+    padding: 12px 10px;
+    font-weight: bold;
+    margin-top: 10px;
+    cursor: pointer;
+    user-select: none;
+    margin-left: 20px;
+}
+#button:hover{
+    background: #928e8e;
+}
+#undoSVG{
+    position: relative;
+    top: 10px;
+    display: inline-block;
+    width: 30px;
+    cursor: pointer;
+    margin-left: 16px;
+    padding: 4px 6px;
+    background: #e7e2e2;
+    border: solid 1px #000;
+    border-radius: 10px;
+    box-shadow: inset 2px 1px;
+}
+#undoSVG:hover{
     background: #928e8e;
 }
 .facebook{
+    /*display: none;*/
     margin: 0 auto;
     width: 300px;
-    margin-top: 15px;
+    margin-top: 25px;
 }
 .google{
     font-size: 10px;
